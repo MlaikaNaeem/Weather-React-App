@@ -1,9 +1,44 @@
 @import url("https://fonts.googleapis.com/css2?family=Courgette&family=Fira+Sans+Condensed&family=Unbounded&display=swap");
 body {
   color: white;
+  background: #F5F1FE;
+  font-family: "Fira Sans Condensed", sans-serif;
+ 
+}
+.weather-app {
+  max-width: 600px;
+  margin: auto;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  padding: 20px 15px;
+  border-radius: 16px;
+  margin-top: 20px;
   background: linear-gradient(
     109.6deg,
     rgb(0, 37, 84) 11.2%,
-    rgba(0, 37, 84, 0.32) 100.2%
+    rgba(110, 118, 129, 0.32) 100.2%
   );
+  font-family: "Fira Sans Condensed", sans-serif;
+}
+.search-bar {
+  width: 250px;
+  height: 20px;
+  background: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+  border-radius: 30px;
+  padding: 20px;
+  margin: 10px;
+  margin-left: 70px;
+  height: 20px;
+  border: none;
+  font-size: 18px;
+  padding-left: 30px;
+}
+::placeholder {
+  color: #999;
+}
+.search-btn {
+  color: #999;
+  background: black;
+  padding: 18px 35px;
+  border-radius: 30px;
+  font-size: 16px;
 }
