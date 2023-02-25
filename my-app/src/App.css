@@ -1,38 +1,166 @@
-.App {
-  text-align: center;
-}
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+@import url("https://fonts.googleapis.com/css2?family=Courgette&family=Fira+Sans+Condensed&family=Unbounded&display=swap");
+body {
   color: white;
+  background: linear-gradient(
+    109.6deg,
+    rgb(0, 37, 84) 11.2%,
+    rgba(0, 37, 84, 0.32) 100.2%
+  );
+}
+h1 {
+  font-family: "Unbounded", cursive;
+}
+.main-temp {
+  font-size: 50px;
+}
+.weather-app {
+  border: 2px solid black;
+  max-width: 600px;
+  margin: auto;
+  padding: 20px 15px;
+  border-radius: 16px;
+  margin-top: 20px;
+  background: linear-gradient(
+    109.6deg,
+    rgb(0, 37, 84) 11.2%,
+    rgba(0, 37, 84, 0.32) 100.2%
+  );
+  font-family: "Fira Sans Condensed", sans-serif;
 }
 
-.App-link {
-  color: #61dafb;
+.box {
+  width: 300px;
+  height: 20px;
+  background: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+  display: flex;
+  align-items: center;
+  border-radius: 30px;
+  padding: 20px;
+  margin: auto;
 }
-
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
+.box i {
+  font-size: 20px;
+}
+.box input {
+  flex: 1;
+  height: 40px;
+  border: none;
+  outline: none;
+  font-size: 18px;
+  padding-left: 10px;
+  background: linear-gradient(-20deg, #2b5876 0%, #4e4376 100%);
+}
+.units {
+  font-size: 22px;
+  position: relative;
+  top: -24px;
+  text-decoration: none;
+}
+.units a {
+  text-decoration: none;
+}
+.units .active {
+  text-decoration: none;
+  color: white;
+  cursor: default;
+}
+.units .fahrenheit {
+  text-decoration: none;
+  color: #98a5bb;
+  font-size: 22px;
+}
+.weather-icon {
+  width: 120px;
+  height: 130px;
+  margin-left: -15px;
+  margin-bottom: -20px;
+  margin-top: -35px;
+}
+.card-body {
+  background: linear-gradient(
+    109.6deg,
+    rgb(0, 37, 84) 11.2%,
+    rgba(0, 37, 84, 0.32) 100.2%
+  );
+  border-radius: 20px;
+  border: 1px black;
+}
+.card {
+  text-align: center;
+  background-color: #155263;
+  font-family: "Courgette", cursive;
+  border-radius: 20px;
+}
+.list-group-item {
+  background: linear-gradient(
+    109.6deg,
+    rgb(0, 37, 84) 11.2%,
+    rgba(0, 37, 84, 0.32) 100.2%
+  );
+  color: white;
+  list-style: none;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  font-weight: 500;
+  line-height: 20px;
+}
+.list {
+  color: #a2a8d3;
+  font-weight: 500;
+}
+.convert {
+  color: #a2a8d3;
+}
+.daily-forecast {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 20px;
+}
+.col-2 {
+  font-size: 20px;
+  font-family: "Courgette", cursive;
+  margin: 5px;
+  text-align: center;
+  flex: 1;
+}
+.daily-icon {
+  display: block;
+  margin: 20px auto;
+  width: 60px;
+  height: 60px;
+}
+.temp-min {
+  opacity: 0.6;
+  font-size: 20px;
+  margin: 5px;
+}
+.github-link {
+  font-size: 12px;
+  font-weight: bold;
+  text-align: center;
+  margin-top: 8px;
+  margin-bottom: 12px;
+  font-family: "Unbounded", cursive;
+  color: #000000;
+}
+.link {
+  font-size: 12px;
+  font-weight: 200;
+  text-align: center;
+  margin-top: 8px;
+  color: #042d57;
+  font-family: "Unbounded", cursive;
+}
+.link:hover {
+  text-decoration: underline;
+  color: #dde0ab;
+}
+#description {
+  text-transform: capitalize;
+}
+@media (max-width: 576px) {
+  .link {
+    margin-bottom: 3px;
   }
 }
