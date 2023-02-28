@@ -16,6 +16,17 @@ export default function App() {
         </form>
         <WeatherDetail />
       </div>
+      <div className="github-link mb-2">
+        <a
+          href="https://github.com/MlaikaNaeem/Weather-React-App"
+          target="_blank"
+          rel="noreferrer"
+          className="link"
+        >
+          Open-source code
+        </a>
+        ", by Mlaika Naeem"
+      </div>
     </div>
   );
 }
