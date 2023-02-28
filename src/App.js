@@ -1,4 +1,5 @@
 import "./App.css";
+import WeatherDetail from "./WeatherDetail";
 
 export default function App() {
   return (
@@ -7,12 +8,13 @@ export default function App() {
         <form>
           <input
             type="text"
-            autocomplete="off"
+            autoComplete="false"
             placeholder="Enter a city..."
             className="search-bar"
           />
           <input type="submit" value="Search" className="search-btn" />
         </form>
+        <WeatherDetail />
       </div>
     </div>
   );
