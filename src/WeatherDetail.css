@@ -1,25 +1,12 @@
 @import url("https://fonts.googleapis.com/css2?family=Courgette&family=Fira+Sans+Condensed&family=Unbounded&display=swap");
-.card-body {
-  background: linear-gradient(
-    109.6deg,
-    rgb(0, 37, 84) 11.2%,
-    rgba(0, 37, 84, 0.32) 100.2%
-  );
-  border-radius: 20px;
-  border: 1px black;
-}
-.card {
-  text-align: center;
-  background-color: #155263;
-  font-family: "Courgette", cursive;
-  border-radius: 20px;
+.description{
+     background: transparent;
+  color: white;
+ border-radius: 20px;
+ font-family: "Courgette", cursive;
 }
 .list-group-item {
-  background: linear-gradient(
-    109.6deg,
-    rgb(0, 37, 84) 11.2%,
-    rgba(0, 37, 84, 0.32) 100.2%
-  );
+ background: transparent;
   color: white;
   list-style: none;
   border: none;
@@ -28,7 +15,4 @@
   font-weight: 500;
   line-height: 20px;
 }
-.list {
-  color: #a2a8d3;
-  font-weight: 500;
-}
+

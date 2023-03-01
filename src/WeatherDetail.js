@@ -2,8 +2,8 @@ import "./WeatherDetail.css";
 
 export default function WeatherDetail() {
   return (
-    <div className="card w-100">
-      <div className="card-body">
+    <div className="row description">
+      <div className="col-6 text-center">
         <h1 className="card-title">London</h1>
         <small> Tuesday, 8:53 </small> / <small>Overcast Clouds</small>
         <br />
@@ -20,6 +20,8 @@ export default function WeatherDetail() {
           </span>
           <img src="/" className="weather-icon" alt="weathericon" />
         </div>
+      </div>
+      <div className="col-6 text-center">
         <ul className="list-group list-group-flush">
           <li className="list-group-item">
             Feels Like: <span className="list"></span>°

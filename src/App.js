@@ -6,14 +6,21 @@ export default function App() {
     <div className="container">
       <div className="weather-app">
         <form>
-          <input
-            type="text"
-            autoComplete="false"
-            placeholder="Enter a city..."
-            className="search-bar"
-          />
-          <input type="submit" value="Search" className="search-btn" />
+          <div className="row">
+            <div className="col-7">
+              <input
+                type="text"
+                autoComplete="false"
+                placeholder="Enter a city..."
+                className="search-bar"
+              />
+            </div>
+            <div className="col-5">
+              <input type="submit" value="Search" className="search-btn" />
+            </div>
+          </div>
         </form>
+
         <WeatherDetail />
       </div>
       <div className="github-link mb-2">
