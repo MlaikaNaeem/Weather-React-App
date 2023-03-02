@@ -16,14 +16,12 @@ body {
   font-family: "Fira Sans Condensed", sans-serif;
 }
 .search-bar {
-  width: 250px;
-  height: 20px;
+  width: 400px;
+  height: 48px;
   background: #000000;
   opacity: 0.5;
   border-radius: 30px;
-  padding: 22px;
-  margin: 10px;
-  margin-left: 70px;
+  color: white;
   border: none;
   font-size: 18px;
   padding-left: 30px;
@@ -34,11 +32,10 @@ body {
 }
 .search-btn {
   color: white;
+  padding: 10px;
   background: #000000;
   opacity: 0.5;
-  padding: 8px 35px;
   border-radius: 30px;
-  margin: 8px;
   font-size: 16px;
 }
 .github-link {

@@ -6,8 +6,8 @@ export default function App() {
     <div className="container">
       <div className="weather-app">
         <form>
-          <div className="row">
-            <div className="col-7">
+          <div className="row mb-3 mt-3">
+            <div className="col-8 text-center">
               <input
                 type="text"
                 autoComplete="false"
@@ -15,8 +15,12 @@ export default function App() {
                 className="search-bar"
               />
             </div>
-            <div className="col-5">
-              <input type="submit" value="Search" className="search-btn" />
+            <div className="col-4 text-center">
+              <input
+                type="submit"
+                value="Search"
+                className="btn btn-outline-dark btn-lg"
+              />
             </div>
           </div>
         </form>
