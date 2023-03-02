@@ -1,18 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Courgette&family=Fira+Sans+Condensed&family=Unbounded&display=swap");
-.description{
-     background: transparent;
+.description {
+  background: transparent;
   color: white;
- border-radius: 20px;
- font-family: "Courgette", cursive;
+  border-radius: 20px;
+  font-family: "Courgette", cursive;
+  font-size: 20px;
 }
 .list-group-item {
- background: transparent;
+  background: transparent;
   color: white;
   list-style: none;
-  border: none;
-  padding: 10px;
-  font-size: 16px;
-  font-weight: 500;
-  line-height: 20px;
+  font-size: 18px;
 }
 
