@@ -4,40 +4,7 @@ body {
   background: #f5f1fe;
   font-family: "Fira Sans Condensed", sans-serif;
 }
-.weather-app {
-  max-width: 600px;
-  margin: auto;
-  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
-  padding: 20px 15px;
-  border-radius: 16px;
-  margin-top: 20px;
-  opacity: 1;
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/547/original/pexels-anete-lusina-6331043.jpg?1677681785");
-  font-family: "Fira Sans Condensed", sans-serif;
-}
-.search-bar {
-  width: 400px;
-  height: 48px;
-  background: #000000;
-  opacity: 0.5;
-  border-radius: 30px;
-  color: white;
-  border: none;
-  font-size: 18px;
-  padding-left: 30px;
-}
-::placeholder {
-  color: white;
-  opacity: 1.5;
-}
-.search-btn {
-  color: white;
-  padding: 10px;
-  background: #000000;
-  opacity: 0.5;
-  border-radius: 30px;
-  font-size: 16px;
-}
+
 .github-link {
   font-size: 12px;
   font-weight: bold;
