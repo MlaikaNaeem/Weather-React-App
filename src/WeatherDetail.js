@@ -3,8 +3,9 @@ import axios from "axios";
 import FormattedDate from "./FormattedDate";
 import { useState } from "react";
 
-export default function WeatherDetail() {
+export default function WeatherDetail(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
+  const [city, setCity] = useState(props.city);
 
   function handleResponse(response) {
     console.log(response.data);
@@ -21,10 +22,26 @@ export default function WeatherDetail() {
     });
   }
 
+  function search() {
+    const apiKey = "8e4abct0a56ee8b9ed8700oa801393f4";
+    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric
+`;
+    axios.get(apiUrl).then(handleResponse);
+  }
+
+  function handleSubmit(event) {
+    event.preventDefault();
+    search();
+  }
+
+  function handleCityChange(event) {
+    setCity(event.target.value);
+  }
+
   if (weatherData.ready) {
     return (
       <div className="weather-app">
-        <form>
+        <form onSubmit={handleSubmit}>
           <div className="row mb-3 mt-3">
             <div className="col-8 text-center">
               <input
@@ -32,6 +49,7 @@ export default function WeatherDetail() {
                 autoComplete="false"
                 placeholder="Enter a city..."
                 className="search-bar"
+                onChange={handleCityChange}
               />
             </div>
             <div className="col-4 text-center">
@@ -46,8 +64,10 @@ export default function WeatherDetail() {
         <div className="row description">
           <div className="col-7 text-center mt-4">
             <h1>{weatherData.city}</h1>
-            <small><FormattedDate date={weatherData.date}/></small> /
-            <small>{weatherData.description}</small>
+            <small>
+              <FormattedDate date={weatherData.date} />
+            </small>{" "}
+            /<small>{weatherData.description}</small>
             <br />
             <div>
               <span className="main-temp">
@@ -86,11 +106,7 @@ export default function WeatherDetail() {
       </div>
     );
   } else {
-    const apiKey = "8e4abct0a56ee8b9ed8700oa801393f4";
-    let city = "London";
-    let apiUrl = `https://api.shecodes.io/weather/v1/current?query=${city}&key=${apiKey}&units=metric
-`;
-    axios.get(apiUrl).then(handleResponse);
+    search();
     return <div>Loading....</div>;
   }
 }
