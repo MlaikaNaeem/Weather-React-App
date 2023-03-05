@@ -1,5 +1,6 @@
 import "./WeatherDetail.css";
 import axios from "axios";
+import FormattedDate from "./FormattedDate";
 import { useState } from "react";
 
 export default function WeatherDetail() {
@@ -10,11 +11,13 @@ export default function WeatherDetail() {
     setWeatherData({
       ready: true,
       temperature: response.data.temperature.current,
+      date: new Date(response.data.time * 1000),
       humidity: response.data.temperature.humidity,
       feelslike: response.data.temperature.feels_like,
       wind: response.data.wind.speed,
       city: response.data.city,
       iconUrl: response.data.condition.icon_url,
+      description: response.data.condition.description,
     });
   }
 
@@ -43,7 +46,8 @@ export default function WeatherDetail() {
         <div className="row description">
           <div className="col-7 text-center mt-4">
             <h1>{weatherData.city}</h1>
-            <small> Tuesday, 8:53 </small> /<small>Overcast Clouds</small>
+            <small><FormattedDate date={weatherData.date}/></small> /
+            <small>{weatherData.description}</small>
             <br />
             <div>
               <span className="main-temp">
