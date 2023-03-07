@@ -2,6 +2,7 @@ import "./WeatherDetail.css";
 import axios from "axios";
 import FormattedDate from "./FormattedDate";
 import { useState } from "react";
+import WeatherIcon from "./WeatherIcon";
 
 export default function WeatherDetail(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -17,7 +18,7 @@ export default function WeatherDetail(props) {
       feelslike: response.data.temperature.feels_like,
       wind: response.data.wind.speed,
       city: response.data.city,
-      iconUrl: response.data.condition.icon_url,
+      icon: response.data.condition.icon,
       description: response.data.condition.description,
     });
   }
@@ -61,15 +62,18 @@ export default function WeatherDetail(props) {
             </div>
           </div>
         </form>
-        <div className="row description">
+
+        <div className="row description m-4">
           <div className="col-7 text-center mt-4">
             <h1>{weatherData.city}</h1>
             <small>
               <FormattedDate date={weatherData.date} />
-            </small>{" "}
-            /<small>{weatherData.description}</small>
-            <br />
+            </small>
+            <h2>{weatherData.description}</h2>
             <div>
+              <div className="float-left">
+                <WeatherIcon code = {props.code}/>
+              </div>
               <span className="main-temp">
                 {Math.round(weatherData.temperature)}
               </span>
@@ -78,14 +82,9 @@ export default function WeatherDetail(props) {
                 <span> |</span>
                 <a href="/">°F</a>
               </span>
-              <br />
-              <img
-                src={weatherData.iconUrl}
-                className="weather-icon"
-                alt="weathericon"
-              />
             </div>
           </div>
+
           <div className="col-5 text-center mt-4">
             <ul className="list-group list-group-flush">
               <li className="list-group-item">
