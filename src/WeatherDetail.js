@@ -70,10 +70,10 @@ export default function WeatherDetail(props) {
             <small>
               <FormattedDate date={weatherData.date} />
             </small>
-            <h2>{weatherData.description}</h2>
+            <small>{weatherData.description}</small>
             <div>
               <div className="float-left">
-                <WeatherIcon code = {props.code}/>
+                <WeatherIcon code={weatherData.icon} />
               </div>
               <span className="main-temp">
                 {Math.round(weatherData.temperature)}
