@@ -1,6 +1,5 @@
 import "./WeatherDetail.css";
 import axios from "axios";
-import ReactAnimatedWeather from "react-animated-weather";
 import FormattedDate from "./FormattedDate";
 import { useState } from "react";
 import WeatherIcon from "./WeatherIcon";
