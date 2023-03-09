@@ -18,11 +18,13 @@ export default function Forecast(props) {
         <div className="row WeatherForecast text-center">
           {forecast.map(function (dailyForecast, index) {
             if (index < 5) {
-                  return (
-                    <div className="col" key={index}>
-                      <DayForecast data={dailyForecast} />
-                    </div>
-                  );
+              return (
+                <div className="col" key={index}>
+                  <DayForecast data={dailyForecast} />
+                </div>
+              );
+            } else {
+              return null;
             }
           })}
         </div>
