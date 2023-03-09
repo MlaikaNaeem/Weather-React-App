@@ -4,7 +4,7 @@ import FormattedDate from "./FormattedDate";
 import { useState } from "react";
 import WeatherTemperature from "./WeatherTemperature";
 import WeatherIcon from "./WeatherIcon";
-import Forecast  from "./Forecast";
+import Forecast from "./Forecast";
 
 export default function WeatherDetail(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -14,6 +14,7 @@ export default function WeatherDetail(props) {
     console.log(response.data);
     setWeatherData({
       ready: true,
+      coordinates: response.data.coordinates,
       temperature: response.data.temperature.current,
       date: new Date(response.data.time * 1000),
       humidity: response.data.temperature.humidity,
@@ -99,7 +100,7 @@ export default function WeatherDetail(props) {
             </ul>
           </div>
         </div>
-        <Forecast />
+        <Forecast coordinates={weatherData.coordinates} />
       </div>
     );
   } else {

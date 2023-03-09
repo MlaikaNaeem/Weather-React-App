@@ -3,6 +3,7 @@
 .WeatherForecast {
   background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/547/original/pexels-anete-lusina-6331043.jpg?1677681785");
   font-family: "Courgette", cursive;
+  color: #000000;
 }
 
 .max-temp {
