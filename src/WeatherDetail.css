@@ -17,6 +17,7 @@ h1 {
 .search-bar {
   width: 400px;
   height: 48px;
+  margin-left: 30px;
   background: #000000;
   opacity: 0.5;
   border-radius: 30px;
