@@ -4,6 +4,7 @@ import FormattedDate from "./FormattedDate";
 import { useState } from "react";
 import WeatherTemperature from "./WeatherTemperature";
 import WeatherIcon from "./WeatherIcon";
+import Forecast  from "./Forecast";
 
 export default function WeatherDetail(props) {
   const [weatherData, setWeatherData] = useState({ ready: false });
@@ -73,7 +74,7 @@ export default function WeatherDetail(props) {
             <small>{weatherData.description}</small>
             <div>
               <div className="float-left">
-                <WeatherIcon code={weatherData.icon} />
+                <WeatherIcon code={weatherData.icon} size={64} />
               </div>
               <div className="float-left">
                 <WeatherTemperature celsius={weatherData.temperature} />
@@ -98,6 +99,7 @@ export default function WeatherDetail(props) {
             </ul>
           </div>
         </div>
+        <Forecast />
       </div>
     );
   } else {
