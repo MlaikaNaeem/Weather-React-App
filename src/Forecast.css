@@ -1,16 +1,15 @@
 @import url("https://fonts.googleapis.com/css2?family=Courgette&family=Fira+Sans+Condensed&family=Unbounded&display=swap");
 
 .WeatherForecast {
-  background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/547/original/pexels-anete-lusina-6331043.jpg?1677681785");
   font-family: "Courgette", cursive;
-  color: #000000;
+  color: #ffffff;
 }
 
 .max-temp {
-  font-size: 20px;
+  font-size: 18px;
 }
 .min-temp {
   opacity: 0.6;
-  font-size: 20px;
+  font-size: 18px;
   margin: 5px;
 }
