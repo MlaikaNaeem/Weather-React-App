@@ -2,6 +2,7 @@
 h1 {
   font-family: "Unbounded", cursive;
   color: #000000;
+  text-align: center;
 }
 .weather-app {
   max-width: 600px;
@@ -53,7 +54,16 @@ h1 {
   list-style: none;
   font-size: 18px;
 }
-.list-group{
+.list-group {
   margin-top: 40px;
- 
+}
+@media (max-width: 576px) {
+  .search-bar {
+    width: 200px;
+    margin-left: 20px;
+  }
+  .list-group-item {
+    font-size: 10px;
+  
+  }
 }

@@ -7,11 +7,11 @@ export default function Forecast(props) {
   const [loaded, setLoaded] = useState(false);
   const [forecast, setForecast] = useState(null);
 
-useEffect(()=>{
-setLoaded(false);
-},[props.coordinates]);
+  useEffect(() => {
+    setLoaded(false);
+  }, [props.coordinates]);
 
-function handleResponse(response) {
+  function handleResponse(response) {
     setForecast(response.data.daily);
     setLoaded(true);
   }
@@ -23,7 +23,7 @@ function handleResponse(response) {
           {forecast.map(function (dailyForecast, index) {
             if (index < 5) {
               return (
-                <div className="col" key={index}>
+                <div className="col-2" key={index}>
                   <DayForecast data={dailyForecast} />
                 </div>
               );
