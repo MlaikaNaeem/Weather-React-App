@@ -27,6 +27,7 @@ h1 {
   border: none;
   font-size: 18px;
   padding-left: 30px;
+  
 }
 ::placeholder {
   color: white;
@@ -60,7 +61,7 @@ h1 {
 @media (max-width: 576px) {
   .search-bar {
     width: 200px;
-    margin-left: 20px;
+    margin-left: 10px;
   }
   .list-group-item {
     font-size: 10px;
