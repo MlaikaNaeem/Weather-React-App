@@ -4,6 +4,9 @@ body {
   background: #f5f1fe;
   font-family: "Fira Sans Condensed", sans-serif;
 }
+.container {
+  margin-top: 40px;
+}
 
 .github-link {
   font-size: 12px;
