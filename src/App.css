@@ -32,10 +32,6 @@ body {
 }
 @media (max-width: 576px) {
   .container {
-    margin-bottom: -20px;
-  }
-  body {
-    background-image: url("https://s3.amazonaws.com/shecodesio-production/uploads/files/000/069/547/original/pexels-anete-lusina-6331043.jpg?1677681785");
-    background-size: cover;
+    margin-bottom: 0px;
   }
 }
